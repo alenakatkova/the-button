@@ -6,56 +6,40 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
+    interface TbButton {
         /**
-          * The first name
+          * Button label
          */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+        "label": string;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLTbButtonElement extends Components.TbButton, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLTbButtonElement: {
+        prototype: HTMLTbButtonElement;
+        new (): HTMLTbButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "tb-button": HTMLTbButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
+    interface TbButton {
         /**
-          * The first name
+          * Button label
          */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+        "label"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "tb-button": TbButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "tb-button": LocalJSX.TbButton & JSXBase.HTMLAttributes<HTMLTbButtonElement>;
         }
     }
 }
