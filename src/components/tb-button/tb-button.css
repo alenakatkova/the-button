@@ -1,0 +1,19 @@
+:host {
+  display: block;
+}
+
+button {
+  border-radius: unset;
+  line-height: 24px;
+  font-size: 16px;
+  padding: 4px 12px;
+  border: 2px solid black;
+  background: mistyrose;
+  cursor: pointer;
+}
+
+button:hover {
+  -webkit-box-shadow: 2px 2px 0px 1px rgba(0,0,0,1);
+  -moz-box-shadow: 2px 2px 0px 1px rgba(0,0,0,1);
+  box-shadow: 2px 2px 0px 1px rgba(0,0,0,1);
+}
